@@ -3,4 +3,5 @@
 /Packages
 /*.xcodeproj
 /.idea
-AirSecrets.xcconfig
+/AirSecrets.xcconfig
+/build
