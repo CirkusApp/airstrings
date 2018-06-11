@@ -2,7 +2,7 @@
 
 Air Strings is a command-line tool for translating localizable strings in Google Sheets.
 
-# Build
+# Building
 
 In order to build an executable you need a client identifier and a secret for Google Sheets API. Please follow instructions at [https://developers.google.com/sheets/api/guides/authorizing#OAuth2Authorizing](https://developers.google.com/sheets/api/guides/authorizing#OAuth2Authorizing) to generate something like this:
 
@@ -19,10 +19,21 @@ xcodebuild -project airstrings.xcodeproj -target airstrings -configuration Relea
 cd build/Release
 ```
 
-# Run
+# Running
 
 Read a manual by performing the following command:
 
 ```bash
 build/Release/airstrings
 ```
+
+# Roadmap
+
+- Write `make build` with `swift build` which gets `.xcconfig` parameters via `-Xcc`
+- Release a binary for public to add support for `brew install airstrings`
+- Use [OysterKit](https://github.com/SwiftStudies/OysterKit) for parsing `.strings`
+- Add support for parsing `.properties` using `OysterKit`
+- Open the website Cirkus Open Source at [https://cirkusapp.github.io](https://cirkusapp.github.io)
+- Move Air Strings to [https://cirkusapp.github.io/airstrings](https://cirkusapp.github.io/airstrings)
+- Build API URLs using [URITemplate.swift](https://github.com/kylef/URITemplate.swift)
+- Describe output format using [Stencil](https://github.com/stencilproject/Stencil) or the like
