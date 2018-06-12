@@ -4,26 +4,26 @@ Air Strings is a command-line tool for translating localizable strings in Google
 
 ### 1. Parse File en/Localizable.strings
 
-<img src="Images/StringsEn@2x.png" alt="Localizable.strings English" width="500px" />
+<img src="Images/StringsEn@2x.png" alt="Localizable.strings English" width="500px" height="280px" />
 
 ### 2. Upload Strings to Google Sheet
 
-<img src="Images/SheetEn@2x.png" alt="Google Sheet with English strings" width="500px" />
+<img src="Images/SheetEn@2x.png" alt="Google Sheet with English strings" width="500px" height="280px" />
 
 ### 3. Translate String in Google Sheets
 
-<img src="Images/SheetRu@2x.png" alt="Google Sheet with Russian strings" width="500px" />
+<img src="Images/SheetRu@2x.png" alt="Google Sheet with Russian strings" width="500px" height="280px" />
 
 ### 3. Download as File ru/Localizable.strings
 
-<img src="Images/StringsRu@2x.png" alt="Localizable.strings Russian" width="500px" />
+<img src="Images/StringsRu@2x.png" alt="Localizable.strings Russian" width="500px" height="280px" />
 
 
 # Building
 
 In order to build an executable you need a client identifier and a secret for Google Sheets API. Please follow instructions at [https://developers.google.com/sheets/api/guides/authorizing#OAuth2Authorizing](https://developers.google.com/sheets/api/guides/authorizing#OAuth2Authorizing) to generate something like this:
 
-<img src="Images/Credentials@2x.png" alt="Google Sheets API Credentials UI" width="664px" />
+<img src="Images/Credentials@2x.png" alt="Google Sheets API Credentials UI" width="500px" height="180px" />
 
 Once generated, copy and replace string values `CLIENT_ID` and `CLIENT_SECRET` in the following script:
 
