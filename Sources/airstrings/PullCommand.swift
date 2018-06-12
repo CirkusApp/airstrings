@@ -27,13 +27,13 @@ class PullCommand: Command {
 
 		// Validate command line arguments
 		guard let spreadsheetId = spreadsheetId.value, !spreadsheetId.isEmpty else {
-			throw AirStringsError.invalidParameter(name: "spreadsheetId", message: "Sheet identifier is necessary for pulling localized strings")
+			throw AirStrings.Error.invalidParameter(name: "spreadsheetId", message: "Sheet identifier is necessary for pulling localized strings")
 		}
 		guard let tabName = tabName.value, !tabName.isEmpty else {
-			throw AirStringsError.invalidParameter(name: "tabName", message: "Tab name is necessary for pulling localized strings")
+			throw AirStrings.Error.invalidParameter(name: "tabName", message: "Tab name is necessary for pulling localized strings")
 		}
 		guard let stringsPath = stringsPath.value, stringsPath.hasSuffix(".strings") else {
-			throw AirStringsError.invalidParameter(name: "path", message: "You must provide path with extension .strings")
+			throw AirStrings.Error.invalidParameter(name: "path", message: "You must provide path with extension .strings")
 		}
 		verboseOutput <<< "Fetching \(tabName) from \(spreadsheetId)…"
 

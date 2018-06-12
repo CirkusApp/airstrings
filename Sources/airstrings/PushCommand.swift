@@ -27,13 +27,13 @@ class PushCommand: Command {
 
 		// Validate command line arguments
 		guard let stringsPath = stringsPath.value, stringsPath.hasSuffix(".strings") else {
-			throw AirStringsError.invalidParameter(name: "path", message: "You must provide path with extension .strings")
+			throw AirStrings.Error.invalidParameter(name: "path", message: "You must provide path with extension .strings")
 		}
 		guard let spreadsheetId = spreadsheetId.value, !spreadsheetId.isEmpty else {
-			throw AirStringsError.invalidParameter(name: "spreadsheetId", message: "Sheet identifier is necessary for uploading localized strings")
+			throw AirStrings.Error.invalidParameter(name: "spreadsheetId", message: "Sheet identifier is necessary for uploading localized strings")
 		}
 		guard let tabName = tabName.value, !tabName.isEmpty else {
-			throw AirStringsError.invalidParameter(name: "tabName", message: "Tab name is necessary for pushing localized strings")
+			throw AirStrings.Error.invalidParameter(name: "tabName", message: "Tab name is necessary for pushing localized strings")
 		}
 		verboseOutput <<< "Fetching \(tabName) from \(spreadsheetId)…"
 
@@ -82,7 +82,7 @@ class PushCommand: Command {
 
 		// Quit if the .strings file is empty
 		guard sheetRows.count > 0 else {
-			throw AirStringsError.invalidData(message: "File with strings does not have any key-value entries")
+			throw AirStrings.Error.invalidData(message: "File with strings does not have any key-value entries")
 		}
 		verboseOutput <<< "\(sheetRows.count) item\(sheetRows.count == 1 ? " was" : "s were") found"
 

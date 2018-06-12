@@ -44,17 +44,17 @@ enum AirStrings {
 		/// Path to local folder ~/.airstrings for saving the token.
 		static let directory: Path = .home + ".\(AirStrings.name)"
 	}
-}
 
-/// Custom errors.
-enum AirStringsError: Error {
+	/// Custom errors.
+	enum Error: Swift.Error {
 
-	/// Parameter is missed or empty.
-	case invalidParameter(name: String, message: String)
+		/// Parameter is missed or empty.
+		case invalidParameter(name: String, message: String)
 
-	/// Credentials are necessary for command.
-	case missedCredentials(message: String)
+		/// Credentials are necessary for command.
+		case missedCredentials(message: String)
 
-	/// Google Sheet contents cannot be parsed.
-	case invalidData(message: String)
+		/// Google Sheet contents cannot be parsed.
+		case invalidData(message: String)
+	}
 }

@@ -46,7 +46,7 @@ extension Command {
 	func googleCredential() throws -> OAuthSwiftCredential {
 		let credentialsPath = AirStrings.Library.directory + AirStrings.Google.credentialsFilename
 		guard let credentialsData = try? credentialsPath.read(), let credential = NSKeyedUnarchiver.unarchiveObject(with: credentialsData) as? OAuthSwiftCredential else {
-			throw AirStringsError.missedCredentials(message: "Google credentials are missed at \(credentialsPath.absolute())")
+			throw AirStrings.Error.missedCredentials(message: "Google credentials are missed at \(credentialsPath.absolute())")
 		}
 		return credential
 	}
