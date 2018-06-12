@@ -54,3 +54,9 @@ build/Release/airstrings
 - Move Air Strings to [https://cirkusapp.github.io/airstrings](https://cirkusapp.github.io/airstrings)
 - Build API URLs using [URITemplate.swift](https://github.com/kylef/URITemplate.swift)
 - Describe output format using [Stencil](https://github.com/stencilproject/Stencil) or the like
+
+# Thanks
+
+- [SwiftCLI](https://github.com/jakeheis/SwiftCLI) — cool processor for command-line interfaces
+- [PathKit](https://github.com/kylef/PathKit) — nice helpers for writing and reading local files
+- [OAuthSwift](https://github.com/OAuthSwift/OAuthSwift) — native Swift library for Google Auth
