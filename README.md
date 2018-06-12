@@ -1,23 +1,32 @@
 # Air Strings
 
-Air Strings is a command-line tool for translating localizable strings in Google Sheets. This is a workflow:
+Air Strings is a command-line tool for translating localizable strings in Google Sheets.
 
-### 1. Parse File en/Localizable.strings
+### 1. Prepare localization e.g. Localizable.strings
+
+Tis is usually done in Xcode or AppCode. The preferred format is `"key" = "value"; // comment`:
 
 <img src="Images/StringsEn@2x.png" alt="Localizable.strings English" width="500px" height="280px" />
 
-### 2. Upload Strings to Google Sheet
+### 2. “Push” Localizable.strings to Google Sheets
+
+The command like `airstrings push --path en/Localizable.strings` will upload key-value pairs with their comments into the Google spreadsheet.
 
 <img src="Images/SheetEn@2x.png" alt="Google Sheet with English strings" width="500px" height="280px" />
 
-### 3. Translate String in Google Sheets
+### 3. Translate strings in Google Sheets
+
+Then you translate strings into any language. By the way, Google Sheets are perfect for collaboration!
 
 <img src="Images/SheetRu@2x.png" alt="Google Sheet with Russian strings" width="500px" height="280px" />
 
-### 3. Download as File ru/Localizable.strings
+### 3. “Pull” translations as new Localizable.strings
+
+Once translation is done, download all strings back using a command like `airstrings pull --path ru/Localizable.strings`.
 
 <img src="Images/StringsRu@2x.png" alt="Localizable.strings Russian" width="500px" height="280px" />
 
+####  🎉 Done!
 
 # Building
 
@@ -41,7 +50,7 @@ cd build/Release
 Read a manual by performing the following command:
 
 ```bash
-build/Release/airstrings
+build/Release/airstrings <command> [options]
 ```
 
 # Roadmap
@@ -60,3 +69,11 @@ build/Release/airstrings
 - [SwiftCLI](https://github.com/jakeheis/SwiftCLI) — cool processor for command-line interfaces
 - [PathKit](https://github.com/kylef/PathKit) — nice helpers for writing and reading local files
 - [OAuthSwift](https://github.com/OAuthSwift/OAuthSwift) — native Swift library for Google Auth
+
+# Contact
+
+Vadim [@Shpakovski](https://github.com/shpakovski).
+
+# License
+
+Air Strings is licensed under [MIT License](LICENSE).
