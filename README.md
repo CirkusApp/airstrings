@@ -4,7 +4,7 @@
 
 Air Strings is a command-line tool for translating localizable strings in Google Sheets.
 
-### 1. Prepare localization e.g. Localizable.strings
+### 1. Prepare localization as Localizable.strings
 
 Tis is usually done in Xcode or AppCode. The preferred format is `"key" = "value"; // comment` 🤷‍♂️
 
@@ -16,13 +16,13 @@ The command like `airstrings push --path en/Localizable.strings` will upload key
 
 <img src="Images/SheetEn@2x.png" alt="Google Sheet with English strings" width="500px" height="280px" />
 
-### 3. Translate strings in Google Sheets
+### 3. Translate strings using Google Sheets
 
 Then you translate strings into any language. By the way, Google Sheets are perfect for collaboration!
 
 <img src="Images/SheetRu@2x.png" alt="Google Sheet with Russian strings" width="500px" height="280px" />
 
-### 3. “Pull” translations as new Localizable.strings
+### 3. “Pull” translations as Localizable.strings
 
 Once translation is done, download all strings back using a command like `airstrings pull --path ru/Localizable.strings`.
 
@@ -87,6 +87,10 @@ Once the app is ready for public, we’ll probably publish at [Brew](https://bre
 # Contact
 
 Vadim [@Shpakovski](https://github.com/shpakovski).
+
+# Copyright
+
+© 2018 [Farmers WIFE S.L.](https://www.farmerswife.com)
 
 # License
 
