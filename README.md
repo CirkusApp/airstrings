@@ -69,6 +69,8 @@ Once the app is ready for public, we’ll probably publish at [Brew](https://bre
 
 # Roadmap
 
+- Renew access token when it’s expired
+- Improve error messages by overriding `AirStrings.Error.localizedDescription`
 - Write `Makefile` with `swift build` and `.xcconfig` passed via `-Xcc`
 - Release a binary for public and implement `brew install airstrings`
 - Use [OysterKit](https://github.com/SwiftStudies/OysterKit) for parsing `.strings`
