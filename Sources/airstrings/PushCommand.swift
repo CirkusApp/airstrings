@@ -45,11 +45,18 @@ class PushCommand: Command {
 
 			// Extract comment
 			var comment: String?
-			if let commentRange = line.range(of: "//") {
+			if let commentRange = line.range(of: "\";\\s*//", options: .regularExpression)  {
 				comment = line.suffix(from: commentRange.upperBound).trimmingCharacters(in: .whitespaces)
-				line = line.prefix(upTo: commentRange.lowerBound)
 			} else {
 				verboseOutput <<< "Comment is missed in \(line)"
+			}
+
+			// Exclude comment from the rest of the line
+			if let lineRange = line.range(of: "\";")  {
+				line = line.prefix(upTo: lineRange.upperBound)
+			} else {
+				standardOutput <<< "Value in \(line) doesn’t have a terminating semicolon"
+				return nil
 			}
 
 			// Extract key and value
